@@ -3,12 +3,12 @@
     <entity name="Subtype" representedClassName="Subtype" syncable="YES">
         <attribute name="age" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="owner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Type" inverseName="subtypes" inverseEntity="Type" syncable="YES"/>
+        <relationship name="owner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Type" inverseName="helper" inverseEntity="Type" syncable="YES"/>
     </entity>
     <entity name="Type" representedClassName="Type" syncable="YES">
         <attribute name="carType" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" attributeType="String" syncable="YES"/>
-        <relationship name="subtypes" toMany="YES" deletionRule="Nullify" destinationEntity="Subtype" inverseName="owner" inverseEntity="Subtype" syncable="YES"/>
+        <relationship name="helper" toMany="YES" deletionRule="Nullify" destinationEntity="Subtype" inverseName="owner" inverseEntity="Subtype" syncable="YES"/>
     </entity>
     <elements>
         <element name="Subtype" positionX="-63" positionY="-18" width="128" height="90"/>

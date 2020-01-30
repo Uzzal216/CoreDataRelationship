@@ -17,14 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="work" translatesAutoresizingMaskIntoConstraints="NO" id="TF4-d6-WpO">
-                                <rect key="frame" x="0.0" y="34" width="375" height="231"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="231" id="eLR-7V-5aB"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CoreData Relationship" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UCd-ID-U9F">
-                                <rect key="frame" x="95" y="445" width="171" height="21"/>
+                                <rect key="frame" x="102" y="323" width="171" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -32,11 +26,8 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="TF4-d6-WpO" secondAttribute="trailing" id="6zh-gt-bYx"/>
-                            <constraint firstItem="UCd-ID-U9F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="95" id="ULq-gB-ZFu"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UCd-ID-U9F" secondAttribute="bottom" constant="201" id="WYo-Nj-yHw"/>
-                            <constraint firstItem="TF4-d6-WpO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="14" id="bgc-EA-VHN"/>
-                            <constraint firstItem="TF4-d6-WpO" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="lpw-CU-AsZ"/>
+                            <constraint firstItem="UCd-ID-U9F" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ThL-xz-PpC"/>
+                            <constraint firstItem="UCd-ID-U9F" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Yfx-UW-y2f"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -46,7 +37,4 @@
             <point key="canvasLocation" x="-71.200000000000003" y="379.16041979010498"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="work" width="626" height="496"/>
-    </resources>
 </document>

@@ -2,7 +2,7 @@
 //  Type+CoreDataProperties.swift
 //  CoreDataRelationship
 //
-//  Created by Sabbir Hossain on 1/28/20.
+//  Created by Sabbir Hossain on 1/29/20.
 //  Copyright © 2020 Sabbir Hossain. All rights reserved.
 //
 //
@@ -19,23 +19,23 @@ extension Type {
 
     @NSManaged public var carType: String?
     @NSManaged public var name: String?
-    @NSManaged public var devices: NSSet?
+    @NSManaged public var helper: NSSet?
 
 }
 
-// MARK: Generated accessors for devices
+// MARK: Generated accessors for helper
 extension Type {
 
-    @objc(addDevicesObject:)
-    @NSManaged public func addToDevices(_ value: Subtype)
+    @objc(addHelperObject:)
+    @NSManaged public func addToHelper(_ value: Subtype)
 
-    @objc(removeDevicesObject:)
-    @NSManaged public func removeFromDevices(_ value: Subtype)
+    @objc(removeHelperObject:)
+    @NSManaged public func removeFromHelper(_ value: Subtype)
 
-    @objc(addDevices:)
-    @NSManaged public func addToDevices(_ values: NSSet)
+    @objc(addHelper:)
+    @NSManaged public func addToHelper(_ values: NSSet)
 
-    @objc(removeDevices:)
-    @NSManaged public func removeFromDevices(_ values: NSSet)
+    @objc(removeHelper:)
+    @NSManaged public func removeFromHelper(_ values: NSSet)
 
 }
