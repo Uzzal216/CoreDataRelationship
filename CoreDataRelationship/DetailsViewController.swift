@@ -13,6 +13,8 @@ import CoreData
 class DetailsViewController: UIViewController{
     
      var type = Type()
+    var subtype = Subtype()
+    
       @IBOutlet weak var tblview: UITableView!
     
         var numberofrow :Int = 0
@@ -42,7 +44,17 @@ extension DetailsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath )
         cell.textLabel?.text = (type.helper?.allObjects[indexPath.row] as! Subtype).name
-        
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
+            subtype = type.helper!.allObjects[indexPath.row] as! Subtype
+            type.removeFromHelper(subtype)
+            PersistenceService.saveContext()
+            print("Delete")
+            self.tblview.reloadData()
+            
+        }
     }
 }

@@ -18,12 +18,15 @@ class ViewController: UIViewController {
     
     var types:[Type] = []
     var type = Type()
+    
+   // var subtype = Subtype()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         showAllTypes()
     
-        //insertData()
+        insertData()
+        
     tableview.delegate = self
     tableview.dataSource = self
         
@@ -65,16 +68,6 @@ class ViewController: UIViewController {
             {
                 print(type.name)
             }
-            //self.type = type
-            //        for item in type {
-            //            print("Name: \(item.name as Any) \nAge: \(item.name as Any)")
-            //
-            //            // Appending to the string
-            //            //self.textFieldString += "Name: " + item.name! + ": " + "Age: " + String(item.age) + "\n"
-            //        }
-            
-            // Show in textview
-            //  showDataTextView.text = textFieldString
             
         } catch {
             print("Failed to fetch")
@@ -104,7 +97,13 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete{
+//
+            type = types[indexPath.row]
+            PersistenceService.context.delete(type)
+            PersistenceService.saveContext()
             print("Delete")
+            self.tableview.reloadData()
+            
         }
     }
     
